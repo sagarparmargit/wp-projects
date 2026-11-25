@@ -1,0 +1,154 @@
+/* All plugin styles are scoped to the shortcode wrapper. */
+.wpp-projects {
+    --wpp-projects-accent: #2457a7;
+    --wpp-projects-accent-hover: #19427f;
+    --wpp-projects-text: #202b3c;
+    --wpp-projects-muted: #637083;
+    --wpp-projects-border: #e2e8f0;
+    color: var(--wpp-projects-text);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.wpp-projects__results {
+    min-height: 2rem;
+}
+
+.wpp-projects__results[aria-busy="true"] {
+    color: var(--wpp-projects-muted);
+}
+
+.wpp-projects__list {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+}
+
+.wpp-projects__item {
+    background: #fff;
+    border: 1px solid var(--wpp-projects-border);
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 18px rgb(22 39 64 / 7%);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.wpp-projects__item:hover {
+    box-shadow: 0 10px 26px rgb(22 39 64 / 12%);
+    transform: translateY(-2px);
+}
+
+.wpp-projects__image {
+    aspect-ratio: 16 / 9;
+    background: #edf2f8;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.wpp-projects__item h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 1.1rem 1.1rem 0;
+}
+
+.wpp-projects__item h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wpp-projects__item h3 a:hover {
+    color: var(--wpp-projects-accent);
+}
+
+.wpp-projects__meta {
+    display: grid;
+    gap: 0.55rem 0.9rem;
+    grid-template-columns: max-content minmax(0, 1fr);
+    color: var(--wpp-projects-muted);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.75rem 1.1rem 1.1rem;
+}
+
+.wpp-projects__meta dt {
+    font-weight: 600;
+}
+
+.wpp-projects__meta dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.wpp-projects__load-more {
+    appearance: none;
+    background: var(--wpp-projects-accent);
+    border: 1px solid var(--wpp-projects-accent);
+    border-radius: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 0.7rem 1rem;
+    transition: background-color 140ms ease, border-color 140ms ease, opacity 140ms ease;
+}
+
+.wpp-projects__load-more:hover {
+    background: var(--wpp-projects-accent-hover);
+    border-color: var(--wpp-projects-accent-hover);
+}
+
+.wpp-projects__load-more:focus-visible,
+.wpp-projects__item h3 a:focus-visible {
+    outline: 3px solid #8bb7ff;
+    outline-offset: 3px;
+}
+
+.wpp-projects__load-more:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.wpp-projects__empty,
+.wpp-projects__error {
+    background: #f7f9fc;
+    border: 1px dashed var(--wpp-projects-border);
+    border-radius: 0.5rem;
+    color: var(--wpp-projects-muted);
+    margin: 0;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.wpp-projects__error {
+    border-color: #e8b4b4;
+    color: #9c2c2c;
+}
+
+@media (max-width: 600px) {
+    .wpp-projects {
+        margin: 1.25rem auto;
+    }
+
+    .wpp-projects__list {
+        gap: 1rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpp-projects__item,
+    .wpp-projects__load-more {
+        transition: none;
+    }
+}
+.wpp-projects {
