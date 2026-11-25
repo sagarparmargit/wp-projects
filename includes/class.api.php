@@ -25,7 +25,7 @@ if( !class_exists( "WP_Project_API" ) ){
          */
         public static function load_instance(){
             if( self::$instanse == null ){
-                new WP_Project_API();
+                self::$instanse = new WP_Project_API();
             }
         }
 
