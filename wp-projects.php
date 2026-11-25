@@ -4,7 +4,7 @@
  * Description: Manage Projects information
  * Version: 0.0.1
  * Author: Sagar Parmar
- * Author uri: www.sagarp.com
+ * Author uri: https://github.com/sagarparmargit
  * text domain: wp-projects
  */
 
