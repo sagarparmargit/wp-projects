@@ -47,7 +47,7 @@ if( !class_exists( "WP_Project" ) ){
          */
         public static function load_instance(){
             if( self::$instanse == null ){
-                new WP_Project();
+                self::$instanse = new WP_Project();
             }
         }
 
